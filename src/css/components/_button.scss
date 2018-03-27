@@ -12,7 +12,7 @@
         position: relative;
     }
     &:hover {
-        transform: translateY(-.5em);
+        transform: translateY(-.2em);
         box-shadow: 0 .1em .8em rgba($color-black,0.2);
 
         &::after {
@@ -21,7 +21,7 @@
         }
     }
     &:active {
-        transform: translateY(-.2em);
+        transform: translateY(0);
         box-shadow: 0 .1em .5em rgba($color-black,0.2);
     }
     &::after {
@@ -50,4 +50,32 @@
         animation: find-button 1s ease-out .8s;
         animation-fill-mode: backwards;
     }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        color: $color-white;
+        background-color: $color-orange-primary;
+        display: inline-block;
+        text-decoration: none;
+        padding: 1rem;
+    }
+
+    &:hover {
+        transform: translateY(-.1em);
+        box-shadow: 0 .1em .8em rgba($color-black,0.2);
+
+        &::after {
+            transform: scaleX(1.2) scaleY(1.5);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .1em .5em rgba($color-black,0.2);
+    }
+
 }

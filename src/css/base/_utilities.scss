@@ -1,0 +1,27 @@
+.u-center-text {
+    text-align: center;
+}
+
+
+
+// Margins
+
+@mixin mb($margin) {
+    margin-bottom: $margin;
+}
+
+.u-margin-bottom-large {
+    @include mb(8rem);
+}
+
+.u-margin-bottom-medium {
+    @include mb(4rem);
+}
+
+.u-margin-bottom-small {
+    @include mb(2rem);
+}
+
+.u-margin-bottom-xsmall {
+    @include mb(1rem);
+}

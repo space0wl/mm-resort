@@ -5,7 +5,6 @@ $grid-gutter-horizontal: 1rem;
 .row {    
     max-width: $grid-width;
     margin: 0 auto;
-    color: $color-white;
 
     &:not(:last-child) {
         margin-bottom: $grid-gutter-vertical;
@@ -14,7 +13,6 @@ $grid-gutter-horizontal: 1rem;
     @include clear-fix;
 
     [class^="col-"] {
-        background-color: $color-orange-primary;
         float: left;
         &:not(:last-child){
             margin-right: $grid-gutter-horizontal;

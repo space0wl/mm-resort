@@ -17,7 +17,7 @@
         url("../images/resort.jpg");
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10vh, 100% 0, 100% 85vh, 0 100%);
 
     &__heading-box {
         position: absolute;
@@ -26,29 +26,5 @@
         transform: translate(-50%, -50%);
         backface-visibility: hidden;
         text-align: center;
-    }
-}
-
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    margin-bottom: 5em;
-
-    &--main {
-        font-size: 12rem;
-        font-weight: 400;
-        letter-spacing: 4rem;
-        text-indent: 4rem;
-        animation-name: heading-primary-main;
-        animation-duration: 1s;
-    }
-    &--sub {
-        font-size: 3rem;
-        font-weight: 400;
-        letter-spacing: 6.6rem;
-        text-indent: 6.6rem;
-        animation-name: heading-primary-sub;
-        animation-duration: 1s;
-        white-space: nowrap;
     }
 }
