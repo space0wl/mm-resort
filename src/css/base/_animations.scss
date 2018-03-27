@@ -1,0 +1,38 @@
+@keyframes heading-primary-main {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    70% {
+        transform: translateX(.2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes heading-primary-sub {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    70% {
+        transform: translateX(-.2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes find-button {
+    0%, 10% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }   
+}

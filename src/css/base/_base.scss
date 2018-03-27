@@ -1,0 +1,26 @@
+@mixin clear-fix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.3;
+    padding: 3rem;
+    box-sizing: border-box;
+}
