@@ -1,0 +1,70 @@
+$grid-width: 114rem;
+$grid-gutter-vertical: 1rem;
+$grid-gutter-horizontal: 1rem;
+
+.row {    
+    max-width: $grid-width;
+    margin: 0 auto;
+    color: $color-white;
+
+    &:not(:last-child) {
+        margin-bottom: $grid-gutter-vertical;
+    }
+
+    @include clear-fix;
+
+    [class^="col-"] {
+        background-color: $color-orange-primary;
+        float: left;
+        &:not(:last-child){
+            margin-right: $grid-gutter-horizontal;
+        }
+    }
+
+    @mixin calculate-col($multi) {
+        @if $multi == 1 {
+            width: 100%;
+        } @else {
+            width: calc((100% * #{$multi}) - #{$grid-gutter-horizontal});
+        }
+    }
+
+    .col {
+        &-12 {
+            @include calculate-col(1);
+        }
+        &-11 {
+            @include calculate-col(.924);
+        }
+        &-10 {
+            @include calculate-col(.84);
+        }
+        &-9 {
+            @include calculate-col(.756);
+        }
+        &-8 {
+            @include calculate-col(.672);
+        }
+        &-7 {
+            @include calculate-col(.588);
+        }
+        &-6 {
+            @include calculate-col(.504);
+        }
+        &-5 {
+            @include calculate-col(.42);
+        }
+        &-4 {
+            @include calculate-col(.336);
+        }
+        &-3 {
+            @include calculate-col(.252);
+        }
+        &-2 {
+            @include calculate-col(.168);
+        }
+        &-1 {
+            @include calculate-col(.084);
+        }
+    }
+}
