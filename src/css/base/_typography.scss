@@ -37,11 +37,6 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: $color-orange-primary;
-    transition: all;
-
-        &:hover {
-            transform: skewY(1deg) skewX(-5deg) scale(1.1);
-        }
 }
 
 .heading-tertiary {
