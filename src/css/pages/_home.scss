@@ -13,9 +13,9 @@
     clip-path: polygon(0 0, 100% 5vh, 100% 100%, 0 100%);
 
     background-image: linear-gradient(
-        to right bottom,
-        rgba($color-orange-primary, .9),
-        rgba($color-blue-primary, .3)),
+        to left bottom,
+        rgba($color-blue-primary, .9),
+        rgba($color-yellow-primary, .3)),
         url("../images/resort.jpg");
         background-size: cover;
 
