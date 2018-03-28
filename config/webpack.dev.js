@@ -33,7 +33,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(sass|scss)$/,
+                test: /\.(sass|scss|css)$/,
                 use: [
                     {
                         loader: "style-loader"
@@ -46,6 +46,17 @@ module.exports = {
                     },
                     {
                         loader: "sass-loader"
+                    }
+                ]
+            },
+            {
+                test: /\.(eot|ttf|woff)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "fonts/[name].[ext]"
+                        }
                     }
                 ]
             },

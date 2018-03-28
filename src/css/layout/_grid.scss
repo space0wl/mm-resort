@@ -1,6 +1,6 @@
 $grid-width: 114rem;
 $grid-gutter-vertical: 1rem;
-$grid-gutter-horizontal: 1rem;
+$grid-gutter-horizontal: 6rem;
 
 .row {    
     max-width: $grid-width;
@@ -23,7 +23,7 @@ $grid-gutter-horizontal: 1rem;
         @if $multi == 1 {
             width: 100%;
         } @else {
-            width: calc((100% * #{$multi}) - #{$grid-gutter-horizontal});
+            width: calc((100% * #{$multi}) - 4.4rem);
         }
     }
 
