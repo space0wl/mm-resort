@@ -1,6 +1,7 @@
-$grid-width: 114rem;
+$grid-width: 110rem;
 $grid-gutter-vertical: 1rem;
-$grid-gutter-horizontal: 6rem;
+$grid-gutter-horizontal: 3rem;
+$grid-cols: 12;
 
 .row {    
     max-width: $grid-width;
@@ -19,50 +20,12 @@ $grid-gutter-horizontal: 6rem;
         }
     }
 
-    @mixin calculate-col($multi) {
-        @if $multi == 1 {
-            width: 100%;
-        } @else {
-            width: calc((100% * #{$multi}) - 4.4rem);
-        }
-    }
-
     .col {
-        &-12 {
-            @include calculate-col(1);
-        }
-        &-11 {
-            @include calculate-col(.924);
-        }
-        &-10 {
-            @include calculate-col(.84);
-        }
-        &-9 {
-            @include calculate-col(.756);
-        }
-        &-8 {
-            @include calculate-col(.672);
-        }
-        &-7 {
-            @include calculate-col(.588);
-        }
-        &-6 {
-            @include calculate-col(.504);
-        }
-        &-5 {
-            @include calculate-col(.42);
-        }
-        &-4 {
-            @include calculate-col(.336);
-        }
-        &-3 {
-            @include calculate-col(.252);
-        }
-        &-2 {
-            @include calculate-col(.168);
-        }
-        &-1 {
-            @include calculate-col(.084);
+        $w: $grid-width;
+        @for $i from 1 through $grid-cols {
+            &-#{$i} {
+                width: ($grid-width / $grid-cols * $i) - $grid-gutter-horizontal;
+            }
         }
     }
 }
