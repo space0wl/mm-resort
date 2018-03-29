@@ -1,4 +1,4 @@
-$height: 50rem;
+$height: 56rem;
 
 .rotating-box {
     height: $height;
@@ -6,6 +6,7 @@ $height: 50rem;
     position: relative;
 
     &__side {
+        overflow: hidden;
         height: $height;
         transition: all .8s ease;
         position: absolute;
@@ -13,20 +14,99 @@ $height: 50rem;
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        
+        border-radius: .3rem;
+
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &--front {
             background-color: $color-white;
         }
         &--back {
-            background-color: $color-blue-primary;
             transform: rotateY(180deg);
+
+            &-orange {
+                background-image: $gradient-yellow-orange-trb;
+            }
+            &-green {
+                background-image: $gradient-green-blue-trb;
+            }
+            &-blue {
+                background-image: $gradient-blue-blue-trb;
+            }
         }
     }
 
+    &__image {
+        background-size: cover;
+        height: 26rem;
+        background-blend-mode: color;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background-image: $gradient-yellow-orange-trb, url("../images/season-pass-1.jpg");
+        }
+        &--2{
+            background-image: $gradient-green-blue-trb, url("../images/season-pass-2.jpg");
+        }
+        &--3{
+            background-image: $gradient-blue-blue-trb, url("../images/season-pass-3.jpg");
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 60%;
+    }
+
+    &__heading-span {
+        line-height: 4.4rem;
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        
+        &--1{
+            background-image: $gradient-yellow-orange-trb;
+        }
+        &--2{
+            background-image: $gradient-green-blue-trb;
+        }
+        &--3{
+            background-image: $gradient-blue-blue-trb;
+        }
+    }
+
+    &__details {
+        padding: 2rem;
+        ul {
+            font-size: 1.7rem;
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid rgba($color-grey-primary-light, .5);
+                }
+                &:last-child {
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+
+        }        
+    }
+
     &:hover &__side--front {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
     &:hover &__side--back {
         transform: rotateY(0);

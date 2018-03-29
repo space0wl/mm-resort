@@ -12,3 +12,30 @@ $color-grey-primary-medium: #ABACAC;
 $color-grey-primary-light: #D1D2D2;
 $color-grey-primary-xlight: #F7F8F9;
 $color-grey-primary-xxlight: #EAECEC;
+
+// Gradients
+
+$gradient-blue-yellow-tlb: linear-gradient(
+    to left bottom,
+    rgba($color-blue-primary, .9),
+    rgba($color-yellow-primary, .3));
+
+$gradient-orange-blue-trb: linear-gradient(
+    to right bottom,
+    rgba($color-orange-primary, .9),
+    rgba($color-blue-primary, .3));
+
+$gradient-yellow-orange-trb: linear-gradient(
+    to right bottom,
+    rgba($color-orange-primary, .5),
+    rgba($color-orange-primary, .9));
+
+$gradient-green-blue-trb: linear-gradient(
+    to right bottom,
+    rgba($color-green-primary, .5),
+    rgba($color-green-primary, .9));    
+
+$gradient-blue-blue-trb: linear-gradient(
+    to right bottom,
+    rgba($color-blue-primary, .5),
+    rgba($color-blue-primary, .9));
