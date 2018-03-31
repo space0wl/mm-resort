@@ -67,7 +67,7 @@ $height: 56rem;
     }
 
     &__heading-span {
-        padding: 3rem 135em 0rem 2rem;
+        padding: 3rem 10em 0rem 2rem;
         white-space: nowrap;
         &--1{
             border-bottom: 2px solid $color-orange-primary;
@@ -127,11 +127,13 @@ $height: 56rem;
     &__price-only {
         font-size: 3.4rem;
         text-transform: uppercase;
-        margin-bottom: 2rem;
+        margin-bottom: 6rem;
     }
     &__price-value {
         font-size: 4rem;
         font-weight: 300;
+        text-align: right;
+        margin-right: 6.5rem;
     }
 
     &:hover &__side--front {
