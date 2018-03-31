@@ -61,12 +61,13 @@ $height: 56rem;
         width: 100%;
         position: absolute;
         top: 14rem;
+        left: -1rem;
         transform: rotate(-4deg);
 
     }
 
     &__heading-span {
-        padding: 3rem 135em 0rem 0;
+        padding: 3rem 135em 0rem 2rem;
         white-space: nowrap;
         &--1{
             border-bottom: 2px solid $color-orange-primary;
@@ -83,6 +84,7 @@ $height: 56rem;
     }
 
     &__details {
+        margin-top: 2rem;
         padding: 2rem;
         ul {
             font-size: 1.7rem;
