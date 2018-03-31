@@ -38,7 +38,7 @@ $height: 56rem;
 
     &__image {
         background-size: cover;
-        height: 26rem;
+        height: 20rem;
         background-blend-mode: color;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -58,25 +58,26 @@ $height: 56rem;
         font-weight: 300;
         text-transform: uppercase;
         color: $color-white;
+        width: 100%;
         position: absolute;
-        top: 12rem;
-        right: 2rem;
-        text-align: right;
-        width: 60%;
+        top: 14rem;
+        transform: rotate(-4deg);
+
     }
 
     &__heading-span {
-        line-height: 4.4rem;
-        padding: 1rem 1.5rem;
-        box-decoration-break: clone;
-        
+        padding: 3rem 135em 0rem 0;
+        white-space: nowrap;
         &--1{
+            border-bottom: 2px solid $color-orange-primary;
             background-image: $gradient-yellow-orange-trb;
         }
         &--2{
+            border-bottom: 2px solid $color-green-primary;
             background-image: $gradient-green-blue-trb;
         }
         &--3{
+            border-bottom: 2px solid $color-blue-primary;
             background-image: $gradient-blue-blue-trb;
         }
     }
@@ -103,6 +104,32 @@ $height: 56rem;
             }
 
         }        
+    }
+
+    &__cta {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price-box {
+        color: $color-white;
+        text-align: center;
+
+        a {
+            margin-top: 8rem;
+        }
+    }
+    &__price-only {
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    &__price-value {
+        font-size: 4rem;
+        font-weight: 300;
     }
 
     &:hover &__side--front {
